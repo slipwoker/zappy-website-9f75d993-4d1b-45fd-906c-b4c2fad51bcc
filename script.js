@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',function(){var mobileToggle=document.getElementById('mobileToggle');var navMenu=document.getElementById('navMenu');var hamburgerIcon=mobileToggle.querySelector('.hamburger-icon');var closeIcon=mobileToggle.querySelector('.close-icon');mobileToggle.addEventListener('click',function(){navMenu.classList.toggle('active');if(navMenu.classList.contains('active')){hamburgerIcon.style.display='none';closeIcon.style.display='block';}else{hamburgerIcon.style.display='block';closeIcon.style.display='none';}});document.querySelectorAll('.nav-menu a').forEach(link=>{link.addEventListener('click',function(){navMenu.classList.remove('active');hamburgerIcon.style.display='block';closeIcon.style.display='none';});});document.addEventListener('click',function(event){var isClickInside=navMenu.contains(event.target)||mobileToggle.contains(event.target);if(!isClickInside&&navMenu.classList.contains('active')){navMenu.classList.remove('active');hamburgerIcon.style.display='block';closeIcon.style.display='none';}});var phoneHeaderBtn=document.querySelector('.phone-header-btn');if(phoneHeaderBtn){phoneHeaderBtn.addEventListener('click',function(){window.location.href='tel:[business_phone]';});}var videoPlayBtn=document.querySelector('.video-play-btn');if(videoPlayBtn){videoPlayBtn.addEventListener('click',function(){alert('Video playback would be implemented here with actual video source');});}var navbar=document.querySelector('.navbar');var lastScroll=0;window.addEventListener('scroll',function(){var currentScroll=window.pageYOffset;if(currentScroll>lastScroll&&currentScroll>100){navbar.style.transform='translateY(-100%)';}else{navbar.style.transform='translateY(0)';}lastScroll=currentScroll;});var observerOptions={threshold:0.1,rootMargin:'0px 0px -100px 0px'};var observer=new IntersectionObserver(function(entries){entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)';observer.unobserve(entry.target);}});},observerOptions);document.querySelectorAll('.signature-card,.menu-item,.value-card,.testimonial-card,.team-member')var contactForm=document.querySelector('.contact-form');if(contactForm){contactForm.addEventListener('submit',function(e){e.preventDefault();var formData=new FormData(contactForm);var data={name:formData.get('name'),phone:formData.get('phone'),email:formData.get('email'),guests:formData.get('guests'),date:formData.get('date'),time:formData.get('time'),message:formData.get('message')};console.log('Form submission:',data);alert('תודה על ההזמנה! נחזור אליך בהקדם לאישור.');contactForm.reset();});}});
+document.addEventListener('DOMContentLoaded',function(){var mobileToggle=document.getElementById('mobileToggle');var navMenu=document.getElementById('navMenu');var hamburgerIcon=mobileToggle.querySelector('.hamburger-icon');var closeIcon=mobileToggle.querySelector('.close-icon');mobileToggle.addEventListener('click',function(){navMenu.classList.toggle('active');if(navMenu.classList.contains('active')){hamburgerIcon.style.display='none';closeIcon.style.display='block';}else{hamburgerIcon.style.display='block';closeIcon.style.display='none';}});document.querySelectorAll('.nav-menu a').forEach(link=>{link.addEventListener('click',function(){navMenu.classList.remove('active');hamburgerIcon.style.display='block';closeIcon.style.display='none';});});document.addEventListener('click',function(event){var isClickInside=navMenu.contains(event.target)||mobileToggle.contains(event.target);if(!isClickInside&&navMenu.classList.contains('active')){navMenu.classList.remove('active');hamburgerIcon.style.display='block';closeIcon.style.display='none';}});var phoneHeaderBtn=document.querySelector('.phone-header-btn');if(phoneHeaderBtn){phoneHeaderBtn.addEventListener('click',function(){window.location.href='tel:[business_phone]';});}var videoPlayBtn=document.querySelector('.video-play-btn');if(videoPlayBtn){videoPlayBtn.addEventListener('click',function(){alert('Video playback would be implemented here with actual video source');});}var navbar=document.querySelector('.navbar');var lastScroll=0;window.addEventListener('scroll',function(){var currentScroll=window.pageYOffset;if(currentScroll>lastScroll&&currentScroll>100){navbar.style.transform='translateY(-100%)';}else{navbar.style.transform='translateY(0)';}lastScroll=currentScroll;});var observerOptions={threshold:0.1,rootMargin:'0px 0px -100px 0px'};var observer=new IntersectionObserver(function(entries){entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)';observer.unobserve(entry.target);}});},observerOptions);document.querySelectorAll('.signature-card,.menu-item,.value-card,.testimonial-card,.team-member').forEach(function(el){observer.observe(el);});var contactForm=document.querySelector('.contact-form');if(contactForm){contactForm.addEventListener('submit',function(e){e.preventDefault();var formData=new FormData(contactForm);var data={name:formData.get('name'),phone:formData.get('phone'),email:formData.get('email'),guests:formData.get('guests'),date:formData.get('date'),time:formData.get('time'),message:formData.get('message')};console.log('Form submission:',data);alert('תודה על ההזמנה! נחזור אליך בהקדם לאישור.');contactForm.reset();});}});
 
 /* Cookie Consent */
 
@@ -233,7 +233,7 @@ window.onload = function() {
     
     // Keyboard shortcut handler: ALT+A (Option+A on Mac) to toggle accessibility widget visibility (desktop only)
     document.addEventListener('keydown', function(event) {
-        // Check if ALT+A is pressed (ALT on Windows/Linux, Option on Mac)
+        // Check if ALT+A is pressed (ALT on Windows/Linux, Option on Mac);
         var isAltOrOption = event.altKey || event.metaKey;
         var isAKey = event.keyCode === 65 || event.which === 65 || 
                       (event.key && (event.key.toLowerCase() === 'a' || event.key === 'å' || event.key === 'Å'));
@@ -244,7 +244,7 @@ window.onload = function() {
                 event.preventDefault();
                 event.stopPropagation();
                 
-                // Toggle visibility class on body
+                // Toggle visibility class on body;
                 var isVisible = document.body.classList.contains('accessibility-widget-visible');
                 
                 if (isVisible) {
@@ -279,7 +279,7 @@ window.onload = function() {
     function initContactFormIntegration() {
         console.log('📧 Zappy: Initializing contact form API integration...');
 
-        // Find the contact form (try multiple selectors for flexibility)
+        // Find the contact form (try multiple selectors for flexibility);
         var contactForm = document.querySelector('.contact-form') || 
                            document.querySelector('form[action*="contact"]') ||
                            document.querySelector('form#contact') ||
@@ -296,16 +296,16 @@ window.onload = function() {
         
         console.log('✅ Zappy: Contact form found:', contactForm.className || contactForm.id || 'unnamed form');
 
-        // Store original submit handler if exists
+        // Store original submit handler if exists;
         var originalOnSubmit = contactForm.onsubmit;
 
     // Add Zappy API integration using capture phase to run before other handlers
     contactForm.addEventListener('submit', async function(e) {
-        // Get form data
+        // Get form data;
         var formData = new FormData(this);
         var data = Object.fromEntries(formData);
 
-        // Send to Zappy backend API (don't prevent default, var other handlers run)
+        // Send to Zappy backend API (don't prevent default,; var other handlers run)
         try {
             console.log('📧 Zappy: Sending contact form to backend API...');
             var response = await fetch('http://localhost:5001/api/email/contact-form', {
