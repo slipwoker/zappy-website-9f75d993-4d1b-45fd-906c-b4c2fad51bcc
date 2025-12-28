@@ -317,9 +317,9 @@ img, picture, figure {
   }
 
   /* 14b. HERO IMAGES */
-  .hero img,
-  .hero-section img,
-  [class*="hero"] > img {
+  .hero img:not(.hero-image),
+  .hero-section img:not(.hero-image),
+  [class*="hero"] > img:not(.hero-image) {
     position: relative !important;
     width: 100% !important;
     height: auto !important;
