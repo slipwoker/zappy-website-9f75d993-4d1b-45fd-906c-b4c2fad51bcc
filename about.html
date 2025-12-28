@@ -1,0 +1,730 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>אודות - Seafood House | הסיפור והערכים שלנו</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Heebo:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <meta name="keywords" content="crab seafood house, shrimp house menu, Seafood House, atlanta fish house and grill">
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '9f75d993-4d1b-45fd-906c-b4c2fad51bcc',
+    apiUrl: 'http://localhost:5001/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+
+    <style id="zappy-mobile-submenu-styles">
+      /* Mobile submenu accordion styles */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
+          position: static !important;
+          transform: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          margin-top: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+        .sub-menu.mobile-expanded {
+          max-height: 500px !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          padding: 8px 0 8px 16px !important;
+        }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
+          padding: 8px 16px 8px 0 !important;
+        }
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
+          opacity: 0; visibility: hidden; pointer-events: none;
+        }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
+          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+        }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
+          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
+        }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
+          flex: 1 !important;
+        }
+        .mobile-submenu-toggle {
+          display: flex !important; align-items: center !important; justify-content: center !important;
+          width: 44px !important; height: 44px !important; background: transparent !important;
+          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
+          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-submenu-toggle::after {
+          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
+          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
+          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
+        }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
+          flex-basis: 100% !important; width: 100% !important;
+        }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
+        .sub-menu a:hover { background-color: transparent !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="/styles.css">
+</head><body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div><nav class="navbar"><button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none;"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button><button class="phone-header-btn" aria-label="Call"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></button><div class="nav-container"><div class="nav-right-group"><div class="nav-brand"><a href="/" class="logo-link" aria-label="Home"><img class="logo" src="/assets/business-logo.webp" alt="Seafood House"></a></div><ul class="nav-menu" id="navMenu"><li><a href="/menu">תפריט</a></li><li><a href="/about" class="active">אודות</a></li><li class="mobile-contact-link"><a href="/contact" class="nav-cta">הזמן שולחן</a></li></ul></div><div class="nav-cta-container">
+          <li class="nav-cta-item">
+            <a href="/contact" class="nav-cta-btn">הזמן שולחן</a>
+          </li>
+        </div></div></nav><main><section class="page-hero"><div class="page-hero-overlay"></div><img data-placeholder="about-hero-restaurant" data-context="elegant seafood restaurant interior with coastal decor, warm lighting, professional photography" width="1920" height="600" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='600'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%90%D7%95%D7%93%D7%95%D7%AA%20Seafood%20House%3C/text%3E%3C/svg%3E" alt="אודות Seafood House"><div class="page-hero-content"><h1 class="page-hero-title">הסיפור שלנו - Crab Seafood House</h1><p class="page-hero-subtitle">מסע של תשוקה, מסורת ומצוינות</p></div></section><section class="about-story"><div class="about-story-content"><div class="about-story-text"><span class="about-label">מי אנחנו</span><h2 class="about-story-title">מקום שבו מקצוענות פוגשת אהבה במסעדת פירות ים</h2><p class="about-story-paragraph">Seafood House נוסדה מתוך אהבה עמוקה לים ולטעמים המושלמים שהוא מציע. הסיפור שלנו כ-crab seafood house התחיל לפני עשר שנים, כשהשף הראשי שלנו חזר מאירופה עם חזון ברור - להביא את חווית פירות הים המשובחת והאותנטית ביותר לישראל. המטרה שלנו הייתה ליצור מסעדה שמשלבת את המסורת האירופאית עם הטעמים המקומיים, תוך התמקדות בסרטנים, שרימפס ודגים טריים מהשווקים המקומיים. כיום, אנו גאים להיות אחת ממסעדות פירות הים המובילות, המציעה תפריט עשיר ומגוון שמשלב מנות קלאסיות עם יצירות קולינריות חדשניות.</p><p class="about-story-paragraph">מאז היום הראשון, אנו מחויבים לשלושה עקרונות יסוד: טריות מוחלטת, איכות ללא פשרות, ושירות יוצא דופן. כל בוקר, הצוות שלנו מגיע לשווקים המקומיים כדי לבחור באופן אישי את פירות הים הטובים ביותר. אנו עובדים ישירות עם דייגים מקומיים וספקים מהימנים שמבינים את הסטנדרטים הגבוהים שלנו. ה-shrimp house menu שלנו מתעדכן באופן קבוע בהתאם לעונה ולזמינות, כדי להבטיח שכל מנה מוגשת בשיא הטריות והטעם. אנו מאמינים שהאיכות מתחילה מהרגע שפירות הים יוצאים מהמים, ולכן אנו משקיעים זמן רב בבחירת המוצרים הטובים ביותר. הקשרים שלנו עם ספקים מקומיים מאפשרים לנו להציע מחירים הוגנים מבלי להתפשר על האיכות.</p><p class="about-story-paragraph">המטבח שלנו הוא מקום שבו מסורת פוגשת חדשנות. אנו משלבים טכניקות בישול קלאסיות עם גישה מודרנית ויצירתית, תוך שמירה על הטעמים האותנטיים שהפכו אותנו למסעדה האהובה על אוהבי פירות הים. כל מנה מעוצבת בקפידה, מהסלט הפשוט ועד למנות הסרטן המיוחדות שלנו. הצוות הקולינרי שלנו עבר הכשרה מקצועית במסעדות מובילות באירופה ובארצות הברית, והם מביאים איתם ידע עשיר וניסיון רב. כמו atlanta fish house and grill מובילים אחרים, אנו מאמינים בשילוב של טכניקות גריל מסורתיות עם שיטות בישול מודרניות. התפריט שלנו כולל מגוון רחב של אפשרויות - מסרטנים מבושלים בחמאה ושום, דרך שרימפס מטוגנים בפירורי לחם פריכים, ועד דגים שלמים אפויים בתנור עם ירקות עונתיים.</p></div><div class="about-story-images"><img class="about-story-img-main" data-placeholder="chef-team-kitchen" data-context="professional chef team in restaurant kitchen working together, cooking seafood, teamwork atmosphere" width="600" height="700" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='700'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%A6%D7%95%D7%95%D7%AA%20%D7%94%D7%9E%D7%98%D7%91%D7%97%3C/text%3E%3C/svg%3E" alt="צוות המטבח"><div class="about-story-img-accent-wrapper"><img class="about-story-img-accent" data-placeholder="restaurant-table-setting" data-context="elegant restaurant table setting with seafood dish, wine glasses, coastal decor, evening ambiance" width="450" height="550" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='450' height='550'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%90%D7%95%D7%95%D7%99%D7%A8%D7%AA%20%D7%94%D7%9E%D7%A1%D7%A2%D7%93%D7%94%3C/text%3E%3C/svg%3E" alt="אווירת המסעדה"></div></div></div></section><section class="about-values"><div class="about-values-header"><h2 class="about-values-title">הערכים שלנו ב-Seafood House</h2><p class="about-values-subtitle">העקרונות שמנחים אותנו בכל יום</p></div><div class="about-values-grid"><div class="value-card"><div class="value-icon"><i class="fas fa-leaf"></i></div><h3 class="value-title">קיימות במסעדת פירות הים שלנו</h3><p class="value-description">אנו מחויבים לדיג בר-קיימא ולעבודה עם ספקים שמכבדים את הסביבה הימית. הבחירות שלנו משפיעות על העתיד של האוקיינוסים שלנו, ולכן אנו בוחרים רק בפירות ים ממקורות אחראיים. אנו עוקבים אחר תקני הקיימות הבינלאומיים ומקפידים לעבוד עם דייגים שמשתמשים בשיטות דיג אחראיות. ב-crab seafood house שלנו, אנו גאים להיות חלק מהמאמץ העולמי לשמור על המשאבים הימיים לדורות הבאים. אנו גם משקיעים בחינוך הצוות והלקוחות שלנו לגבי חשיבות הבחירות האקולוגיות שלנו.</p></div><div class="value-card"><div class="value-icon"><i class="fas fa-heart"></i></div><h3 class="value-title">תשוקה לפירות ים טריים</h3><p class="value-description">כל חבר צוות ב-Seafood House חולק את האהבה לאוכל טוב ושירות מצוין. התשוקה הזו מורגשת בכל מנה שאנו מגישים ובכל אינטראקציה עם הלקוחות שלנו. הצוות שלנו עובר הכשרה מתמשכת בנושאי פירות ים, טכניקות בישול, ושירות לקוחות ברמה גבוהה. אנו מאמינים שהמלצרים והטבחים שלנו הם שגרירי המותג שלנו, והם אלו שיוצרים את החוויה המיוחדת שהלקוחות שלנו חוזרים בשבילה. ה-shrimp house menu שלנו מוסבר בפירוט על ידי הצוות, כך שכל אורח יכול לבחור את המנה המושלמת עבורו.</p></div><div class="value-card"><div class="value-icon"><i class="fas fa-star"></i></div><h3 class="value-title">מצוינות</h3><p class="value-description">אנו שואפים למצוינות בכל היבט - מהבחירה הקפדנית של המרכיבים ועד לפרטים הקטנים ביותר בשירות ובאווירה. העיצוב של המסעדה משקף את האהבה שלנו לים, עם צבעים כחולים ולבנים, תאורה רכה, ואלמנטים ימיים שיוצרים אווירה נעימה ומזמינה. אנו מקפידים על ניקיון מוחלט במטבח ובאזורי האירוח, ועל תחזוקה שוטפת של כל הציוד. כמסעדת פירות ים מובילה, אנו מבינים שהחוויה הכוללת כוללת לא רק את האוכל, אלא גם את האווירה, השירות, והתשומת לב לפרטים. הלקוחות שלנו מעריכים את המחויבות שלנו למצוינות, והם חוזרים אלינו שוב ושוב כדי ליהנות מהחוויה המיוחדת שרק Seafood House יכולה להציע.</p></div><div class="value-card"><div class="value-icon"><i class="fas fa-users"></i></div><h3 class="value-title">קהילה</h3><p class="value-description">אנו גאים להיות חלק מהקהילה המקומית, תומכים בעסקים מקומיים ומשתפים פעולה עם אומנים ויצרנים מהאזור.</p></div></div></section><section class="about-chef"><div class="about-chef-content"><div class="about-chef-image-wrapper"><img data-placeholder="head-chef-portrait-about" data-context="professional portrait of experienced head chef in chef whites, confident expression, restaurant background" width="700" height="850" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='850'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%94%D7%A9%D7%A3%20%D7%94%D7%A8%D7%90%D7%A9%D7%99%3C/text%3E%3C/svg%3E" alt="השף הראשי"><div class="chef-experience-badge"><span class="badge-number">15+</span><span class="badge-text">שנות ניסיון</span></div></div><div class="about-chef-text"><span class="about-label">השף הראשי</span><h2 class="about-chef-title">לפגוש את האמן מאחורי המנות</h2><p class="about-chef-paragraph">השף דני רוזן, השף הראשי והבעלים של Seafood House, הוא אמן קולינרי עם תשוקה עמוקה לפירות ים. לאחר שנים של עבודה במטבחים מובילים באירופה, כולל שלושה מסעדות עם כוכבי מישלן בצרפת ובספרד, דני חזר לישראל עם חזון ברור - ליצור מסעדת פירות ים שמשלבת את הטוב ביותר מהמסורת הים תיכונית עם טכניקות בישול מודרניות.</p><p class="about-chef-paragraph">"הפילוסופיה שלי פשוטה," אומר דני. "תן למרכיבים לדבר בעצמם. כשיש לך פירות ים טריים באיכות יוצאת דופן, התפקיד שלי הוא לכבד את הטעם הטבעי שלהם ולהעלות אותו לרמה הבאה, לא להסתיר אותו מתחת לרטבים מסובכים או טכניקות מיותרות."</p><p class="about-chef-paragraph">דני מוכר באינדוסטריה הקולינרית בישראל כחלוץ בתחום פירות הים, וזכה במספר פרסים יוקרתיים, כולל 'שף השנה' מטעם מדריך הגורמה הישראלי ו'מסעדת פירות הים הטובה ביותר' שלוש שנים ברציפות. אבל עבור דני, הפרס האמיתי הוא לראות את האושר בפניהם של האורחים כשהם טועמים את המנות שלו.</p><div class="chef-quote"><i class="fas fa-quote-right"></i><p class="quote-text">"אוכל טוב הוא לא רק על טעם - זו חוויה שמערבת את כל החושים ויוצרת זיכרונות מתמשכים"</p><span class="quote-author">- דני רוזן, שף ראשי</span></div></div></div></section><section class="about-team"><div class="about-team-header"><h2 class="about-team-title">הצוות שלנו</h2><p class="about-team-subtitle">פגוש את האנשים שהופכים כל ביקור לחוויה מיוחדת</p></div><div class="about-team-grid"><div class="team-member"><img data-placeholder="sous-chef-portrait" data-context="professional portrait of sous chef in kitchen uniform, friendly smile, restaurant kitchen background" width="400" height="500" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%A1%D7%95-%D7%A9%D7%A3%3C/text%3E%3C/svg%3E" alt="סו-שף"><div class="team-member-info"><h3 class="team-member-name">מיכל כהן</h3><span class="team-member-role">סו-שף</span><p class="team-member-bio">מיכל מביאה 10 שנות ניסיון במטבחים מובילים ומתמחה בפסטות ים תיכוניות.</p></div></div><div class="team-member"><img data-placeholder="sommelier-portrait" data-context="professional portrait of wine sommelier in elegant attire, wine cellar background, sophisticated" width="400" height="500" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%A1%D7%95%D7%9E%D7%9C%D7%99%D7%99%D7%A8%3C/text%3E%3C/svg%3E" alt="סומלייר"><div class="team-member-info"><h3 class="team-member-name">יונתן לוי</h3><span class="team-member-role">סומלייר ראשי</span><p class="team-member-bio">יונתן הוא מומחה יינות מוסמך עם תשוקה למציאת השידוכים המושלמים לכל מנה.</p></div></div><div class="team-member"><img data-placeholder="restaurant-manager-portrait" data-context="professional portrait of restaurant manager in elegant business attire, welcoming expression" width="400" height="500" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%9E%D7%A0%D7%94%D7%9C%D7%AA%20%D7%9E%D7%A1%D7%A2%D7%93%D7%94%3C/text%3E%3C/svg%3E" alt="מנהלת מסעדה"><div class="team-member-info"><h3 class="team-member-name">שרה אברהם</h3><span class="team-member-role">מנהלת מסעדה</span><p class="team-member-bio">שרה מבטיחה שכל אורח מקבל חוויה מושלמת מהרגע שהוא נכנס לדלת.</p></div></div></div></section><section class="about-awards"><div class="about-awards-content"><div class="about-awards-text"><h2 class="about-awards-title">הוקרה ופרסים</h2><p class="about-awards-description">אנו גאים בהכרה שקיבלנו מהקהילה הקולינרית והאורחים שלנו. פרסים אלו משקפים את המחויבות שלנו למצוינות ואת התשוקה שלנו ליצירת חוויות אוכל בלתי נשכחות.</p></div><div class="awards-grid"><div class="award-item"><div class="award-icon"><i class="fas fa-trophy"></i></div><div class="award-content"><h3 class="award-name">מסעדת פירות הים הטובה ביותר</h3><span class="award-year">2021, 2022, 2023</span><p class="award-organization">מדריך הגורמה הישראלי</p></div></div><div class="award-item"><div class="award-icon"><i class="fas fa-star"></i></div><div class="award-content"><h3 class="award-name">שף השנה</h3><span class="award-year">2022</span><p class="award-organization">איגוד השפים הישראלי</p></div></div><div class="award-item"><div class="award-icon"><i class="fas fa-certificate"></i></div><div class="award-content"><h3 class="award-name">תעודת מצוינות</h3><span class="award-year">2020-2024</span><p class="award-organization">TripAdvisor</p></div></div><div class="award-item"><div class="award-icon"><i class="fas fa-medal"></i></div><div class="award-content"><h3 class="award-name">מסעדה ידידותית לסביבה</h3><span class="award-year">2023</span><p class="award-organization">המועצה לקיימות</p></div></div></div></div></section><section class="about-cta"><div class="about-cta-overlay"></div><img data-placeholder="restaurant-evening-ambiance" data-context="beautiful restaurant dining area at evening with candlelight, elegant table settings, romantic atmosphere" width="1920" height="700" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='700'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3E%D7%91%D7%95%D7%90%20%D7%9C%D7%97%D7%95%D7%95%D7%AA%3C/text%3E%3C/svg%3E" alt="בוא לחוות"><div class="about-cta-content"><h2 class="about-cta-title">חוויה שכדאי לחוות</h2><p class="about-cta-description">הצטרף אלינו ל-Seafood House וגלה בעצמך מדוע אנחנו יעד האהוב על אוהבי פירות הים</p><a href="/contact" class="btn-cta-large">הזמן שולחן עכשיו</a></div></section></main><footer class="footer"><div class="footer-content"><div class="footer-section"><h3 class="footer-title">Seafood House</h3><p class="footer-description">חוויית פירות ים יוקרתית בלב העיר</p><div class="footer-social"><a href="https://facebook.com/[facebook_handle]" aria-label="Facebook"><i class="fab fa-facebook"></i></a><a href="https://instagram.com/[instagram_handle]" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://wa.me/[whatsapp_handle]" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div></div><div class="footer-section"><h4 class="footer-heading">קישורים מהירים</h4><ul class="footer-links"><li><a href="/menu">תפריט</a></li><li><a href="/about">אודות</a></li><li><a href="/contact">צור קשר</a></li></ul></div><div class="footer-section"><h4 class="footer-heading">יצירת קשר</h4><ul class="footer-contact"><li>[business_email]</li><li>[business_phone]</li><li>[business_address]</li></ul></div><div class="footer-section"><h4 class="footer-heading">שעות פתיחה</h4><ul class="footer-hours"><li>ראשון - חמישי:12:00 - 23:00</li><li>שישי - שבת:12:00 - 00:00</li></ul></div></div><div class="footer-bottom"><div class="footer-legal"><a href="/privacy">מדיניות פרטיות</a><a href="/accessibility">הצהרת נגישות</a><a href="/terms">תנאי שימוש</a></div><p class="footer-copyright">© 2024 Seafood House. כל הזכויות שמורות.</p><p class="footer-credit">נוצר על ידי <a href="https://zappy5.com" target="_blank" rel="noopener">Zappy</a></p></div></footer><a href="https://wa.me/[business_phone]" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<script>
+
+// Navbar Mobile Menu Toggle and Contrast Fix
+(function() {
+  // Use 'load' event instead of 'DOMContentLoaded' to ensure we run AFTER all other scripts
+  window.addEventListener('load', function() {
+    
+    // FIX MOBILE BUTTON CONTRAST
+    // Detect navbar background color and apply contrasting color to mobile buttons
+    const navbar = document.querySelector('.navbar, nav, header');
+    if (!navbar) {
+      console.log('[Navbar] Navbar element not found');
+      return;
+    }
+    
+    const computedStyle = window.getComputedStyle(navbar);
+    let bgColor = computedStyle.backgroundColor;
+    
+    console.log('[Navbar] Initial navbar background:', bgColor);
+    
+    // Check if background is transparent or rgba with 0 alpha
+    const isTransparent = bgColor === 'transparent' || 
+                         bgColor === 'rgba(0, 0, 0, 0)' ||
+                         (bgColor.startsWith('rgba') && bgColor.includes(', 0)'));
+    
+    if (isTransparent) {
+      // Check for background-image or gradient
+      const bgImage = computedStyle.backgroundImage;
+      if (bgImage && bgImage !== 'none') {
+        console.log('[Navbar] Navbar has background image/gradient, using dark text');
+        bgColor = 'rgb(240, 240, 240)'; // Assume light background
+      } else {
+        // Transparent navbar - check body background
+        const bodyBg = window.getComputedStyle(document.body).backgroundColor;
+        console.log('[Navbar] Navbar transparent, using body background:', bodyBg);
+        bgColor = bodyBg;
+      }
+    }
+    
+    // Calculate luminance to determine if background is light or dark
+    const rgb = bgColor.match(/\d+/g);
+    if (rgb && rgb.length >= 3) {
+      const r = parseInt(rgb[0]);
+      const g = parseInt(rgb[1]);
+      const b = parseInt(rgb[2]);
+      const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+      
+      // Don't apply color overrides - let Claude's CSS handle all colors
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const phoneBtn = document.querySelector('.phone-header-btn');
+      
+      console.log('[Navbar] Mobile buttons found - colors from Claude\'s CSS:', { 
+        bgColor, 
+        luminance: luminance.toFixed(2),
+        buttons: { mobileToggle: !!mobileToggle, phoneBtn: !!phoneBtn }
+      });
+      
+      // FIX ICON SIZES - Ensure SVGs are properly sized and visible
+      // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES
+      const criticalCSS = document.createElement('style');
+      criticalCSS.id = 'zappy-mobile-nav-fix';
+      const htmlLang = document.documentElement.lang || 'en';
+      const isRTL = htmlLang === 'he' || htmlLang === 'ar';
+      
+      criticalCSS.textContent = `
+        /* Hide mobile buttons on desktop, show only on mobile */
+        @media (min-width: 769px) {
+          .mobile-toggle,
+          .phone-header-btn {
+            display: none !important;
+          }
+        }
+        
+        /* Show and position mobile buttons correctly on mobile */
+        @media (max-width: 768px) {
+          .mobile-toggle,
+          .phone-header-btn {
+            position: absolute !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            z-index: 1001 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 44px !important;
+            height: 44px !important;
+            border-radius: 50% !important;
+            /* Background and colors from Claude's CSS - don't override */
+            border: none !important;
+            cursor: pointer !important;
+            padding: 8px !important;
+          }
+          
+          .mobile-toggle {
+            ${isRTL ? 'right: 20px !important; left: auto !important;' : 'left: 20px !important; right: auto !important;'}
+          }
+          
+          .phone-header-btn {
+            ${isRTL ? 'left: 20px !important; right: auto !important;' : 'right: 20px !important; left: auto !important;'}
+          }
+          
+          /* Ensure SVG icons are properly sized - colors from Claude's CSS */
+          .mobile-toggle svg,
+          .phone-header-btn svg {
+            width: 24px !important;
+            height: 24px !important;
+            /* Don't force display - let JavaScript control hamburger/close toggle */
+          }
+          
+          /* SVG path colors from Claude's CSS - don't override */
+        }
+      `;
+      
+      // Remove existing fix if present and inject new one
+      const existing = document.getElementById('zappy-mobile-nav-fix');
+      if (existing) existing.remove();
+      document.head.appendChild(criticalCSS);
+      
+      console.log('[Navbar] Critical CSS injected for mobile nav positioning');
+      
+      if (mobileToggle) {
+        // Also set inline styles as backup
+        mobileToggle.style.setProperty('position', 'absolute', 'important');
+        mobileToggle.style.setProperty('top', '50%', 'important');
+        mobileToggle.style.setProperty('transform', 'translateY(-50%)', 'important');
+        mobileToggle.style.setProperty('z-index', '1001', 'important');
+        
+        if (isRTL) {
+          mobileToggle.style.setProperty('right', '20px', 'important');
+          mobileToggle.style.setProperty('left', 'auto', 'important');
+        } else {
+          mobileToggle.style.setProperty('left', '20px', 'important');
+          mobileToggle.style.setProperty('right', 'auto', 'important');
+        }
+        
+        const hamburgerIcon = mobileToggle.querySelector('.hamburger-icon');
+        const closeIcon = mobileToggle.querySelector('.close-icon');
+        
+        if (hamburgerIcon) {
+          hamburgerIcon.style.setProperty('width', '24px', 'important');
+          hamburgerIcon.style.setProperty('height', '24px', 'important');
+          hamburgerIcon.style.setProperty('display', 'block', 'important'); // Show hamburger by default
+          console.log('[Navbar] Hamburger icon sized and shown');
+        }
+        if (closeIcon) {
+          closeIcon.style.setProperty('width', '24px', 'important');
+          closeIcon.style.setProperty('height', '24px', 'important');
+          closeIcon.style.setProperty('display', 'none', 'important'); // Hide close icon by default
+          console.log('[Navbar] Close icon sized and hidden');
+        }
+        
+        console.log('[Navbar] Mobile toggle positioned:', {
+          lang: htmlLang,
+          position: htmlLang === 'he' || htmlLang === 'ar' ? 'right: 20px' : 'left: 20px'
+        });
+      }
+      
+      if (phoneBtn) {
+        // Also set inline styles as backup
+        phoneBtn.style.setProperty('position', 'absolute', 'important');
+        phoneBtn.style.setProperty('top', '50%', 'important');
+        phoneBtn.style.setProperty('transform', 'translateY(-50%)', 'important');
+        phoneBtn.style.setProperty('z-index', '1001', 'important');
+        
+        if (isRTL) {
+          phoneBtn.style.setProperty('left', '20px', 'important');
+          phoneBtn.style.setProperty('right', 'auto', 'important');
+        } else {
+          phoneBtn.style.setProperty('right', '20px', 'important');
+          phoneBtn.style.setProperty('left', 'auto', 'important');
+        }
+        
+        const phoneIcon = phoneBtn.querySelector('svg');
+        if (phoneIcon) {
+          phoneIcon.style.width = '24px';
+          phoneIcon.style.height = '24px';
+          phoneIcon.setAttribute('width', '24');
+          phoneIcon.setAttribute('height', '24');
+          console.log('[Navbar] Phone icon sized to 24x24');
+        }
+        
+        console.log('[Navbar] Phone button positioned:', {
+          lang: htmlLang,
+          position: htmlLang === 'he' || htmlLang === 'ar' ? 'left: 20px' : 'right: 20px'
+        });
+      }
+    } else {
+      console.log('[Navbar] Could not parse background color:', bgColor);
+    }
+    
+    // MOBILE MENU TOGGLE
+   
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (!mobileToggle || !navMenu) {
+      console.log('[Navbar] Mobile toggle or menu not found');
+      return;
+    }
+    
+    console.log('[Navbar] Initializing mobile menu...');
+    
+    // Remove any existing event listeners by cloning the button
+    const newToggle = mobileToggle.cloneNode(true);
+    mobileToggle.parentNode.replaceChild(newToggle, mobileToggle);
+    
+    // Toggle menu on button click - use newToggle now
+    newToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const hamburgerIcon = this.querySelector('.hamburger-icon');
+      const closeIcon = this.querySelector('.close-icon');
+      const isActive = navMenu.classList.contains('active');
+      
+      if (isActive) {
+        // Close menu
+        navMenu.classList.remove('active');
+        if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important');
+        if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important');
+        document.body.style.overflow = '';
+        console.log('[Navbar] Menu closed');
+      } else {
+        // Open menu
+        navMenu.classList.add('active');
+        if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'none', 'important');
+        if (closeIcon) closeIcon.style.setProperty('display', 'block', 'important');
+        document.body.style.overflow = 'hidden';
+        console.log('[Navbar] Menu opened');
+      }
+    });
+    
+    // Close menu when clicking nav links
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        const hamburgerIcon = newToggle.querySelector('.hamburger-icon');
+        const closeIcon = newToggle.querySelector('.close-icon');
+        
+        navMenu.classList.remove('active');
+        if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important');
+        if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important');
+        document.body.style.overflow = '';
+        console.log('[Navbar] Menu closed (link clicked)');
+      });
+    });
+    
+    // Phone button functionality
+    const phoneBtn = document.querySelector('.phone-header-btn');
+    if (phoneBtn) {
+      phoneBtn.addEventListener('click', function() {
+        // Get phone number from placeholder in page or use default
+        const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+        const phoneNumber = phoneLinks.length > 0 
+          ? phoneLinks[0].getAttribute('href').replace('tel:', '')
+          : '[business_phone]';
+        
+        window.location.href = 'tel:' + phoneNumber;
+        console.log('[Navbar] Phone button clicked');
+      });
+    }
+    
+    console.log('[Navbar] Mobile menu initialized successfully');
+    
+    // === WHATSAPP BUTTON VISIBILITY FIX ===
+    // Ensure WhatsApp floating button is hidden on desktop and visible on mobile
+    const handleWhatsAppVisibility = function() {
+      const whatsappBtn = document.querySelector('.whatsapp-float, a[href*="wa.me"]');
+      if (whatsappBtn) {
+        const isDesktop = window.innerWidth >= 769;
+        if (isDesktop) {
+          whatsappBtn.style.setProperty('display', 'none', 'important');
+          whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
+          whatsappBtn.style.setProperty('opacity', '0', 'important');
+          whatsappBtn.style.setProperty('pointer-events', 'none', 'important');
+          console.log('[WhatsApp] Button hidden on desktop');
+        } else {
+          whatsappBtn.style.removeProperty('display');
+          whatsappBtn.style.removeProperty('visibility');
+          whatsappBtn.style.removeProperty('opacity');
+          whatsappBtn.style.removeProperty('pointer-events');
+          console.log('[WhatsApp] Button visible on mobile');
+        }
+      }
+    };
+    
+    // Run on load
+    handleWhatsAppVisibility();
+    
+    // Run on resize with debouncing
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(handleWhatsAppVisibility, 100);
+    });
+  });
+})();
+
+</script>
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = '9f75d993-4d1b-45fd-906c-b4c2fad51bcc';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('http://localhost:5001/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          // Use dynamic announcement content if available
+          if (data.announcement && data.announcement.html) {
+            header.innerHTML = data.announcement.html;
+          }
+          // Apply fixed positioning styles inline (works for existing sites too)
+          header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
+          // Fix child elements that might have position: fixed from old CSS
+          var children = header.querySelectorAll('*');
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.position = 'static';
+          }
+          // Get header height
+          var headerHeight = header.offsetHeight;
+          // Find and fix navbar to be fixed as well (prevents gap at top of page)
+          var navSelectors = ['nav', '.navbar', '.nav'];
+          var navbar = null;
+          for (var j = 0; j < navSelectors.length; j++) {
+            navbar = document.querySelector(navSelectors[j]);
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
+            navbar = null;
+          }
+          if (navbar) {
+            var navbarHeight = navbar.offsetHeight;
+            navbar.style.cssText += '; position: fixed !important; top: ' + headerHeight + 'px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99998 !important;';
+            document.body.style.paddingTop = (headerHeight + navbarHeight) + 'px';
+          } else {
+            document.body.style.paddingTop = headerHeight + 'px';
+          }
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+    })();
+    </script>
+    <script src="/script.js"></script>
+</body></html>
