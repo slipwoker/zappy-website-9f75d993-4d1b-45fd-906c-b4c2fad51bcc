@@ -1,47 +1,58 @@
-# Business — Generative Engine Optimization Map
+# Seafood House — Generative Engine Optimization Map
+
+> A מסעדנות business.
 
 ---
 
 ## Pages
 
 ### Home
-https://seafood-house.zappy5.app
+https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com
 Seafood House - מסעדת פירות ים יוקרתית המציעה חוויית אוכל מעודנת עם המנות הטריות והטעימות ביותר. הזמן שולחן עכשיו.
 
 ### Menu
-https://seafood-house.zappy5.app/menu
+https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/menu
 גלה את תפריט פירות הים המגוון שלנו - מנות פתיחה, מנות עיקריות, פסטות וקינוחים. טריות מובטחת בכל מנה.
 
 ### About
-https://seafood-house.zappy5.app/about
+https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/about
 גלה את הסיפור מאחורי Seafood House, פגוש את הצוות והשף הראשי, ולמד על הערכים והמחויבות שלנו למצוינות קולינרית.
 
 ### Contact
-https://seafood-house.zappy5.app/contact
+https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/contact
 צור קשר עם Seafood House או הזמן שולחן עכשיו. נשמח לארח אותך לחוויית אוכל בלתי נשכחת.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://seafood-house.zappy5.app/privacy
+https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://seafood-house.zappy5.app/terms
+https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://seafood-house.zappy5.app/accessibility
+https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About Seafood House
+Seafood House is a business in the מסעדנות industry.
+
+## Target Audience
+- חובבי מאכלי ים
+- זוגות מקומיים
+
+## Industry
+מסעדנות
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://seafood-house.zappy5.app/sitemap.xml
-- **Robots.txt**: https://seafood-house.zappy5.app/robots.txt
+- **Sitemap**: https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/sitemap.xml
+- **Robots.txt**: https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/robots.txt
