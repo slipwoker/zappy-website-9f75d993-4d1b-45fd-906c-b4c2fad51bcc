@@ -240,14 +240,7 @@ img, picture, figure {
 
   /* 7. ABSOLUTE POSITIONING FIXES */
   /* Exclude mobile navigation buttons from positioning fixes */
-  [style*="position: absolute"]:not(.mobile-toggle):not(.phone-header-btn):not(.skip-link),
-  [style*="position:absolute"]:not(.mobile-toggle):not(.phone-header-btn):not(.skip-link) {
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-  }
+  /* Removed position killer */
 
   /* 8. MULTI-COLUMN LAYOUTS */
   .columns,
