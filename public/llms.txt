@@ -1,58 +1,47 @@
-# Seafood House — Generative Engine Optimization Map
-
-> A מסעדנות business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
 ### Home
-https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com
+https://seafood-house.zappy5.app
 Seafood House - מסעדת פירות ים יוקרתית המציעה חוויית אוכל מעודנת עם המנות הטריות והטעימות ביותר. הזמן שולחן עכשיו.
 
 ### Menu
-https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/menu
+https://seafood-house.zappy5.app/menu
 גלה את תפריט פירות הים המגוון שלנו - מנות פתיחה, מנות עיקריות, פסטות וקינוחים. טריות מובטחת בכל מנה.
 
 ### About
-https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/about
+https://seafood-house.zappy5.app/about
 גלה את הסיפור מאחורי Seafood House, פגוש את הצוות והשף הראשי, ולמד על הערכים והמחויבות שלנו למצוינות קולינרית.
 
 ### Contact
-https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/contact
+https://seafood-house.zappy5.app/contact
 צור קשר עם Seafood House או הזמן שולחן עכשיו. נשמח לארח אותך לחוויית אוכל בלתי נשכחת.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/privacy
+https://seafood-house.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/terms
+https://seafood-house.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/accessibility
+https://seafood-house.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Seafood House
-Seafood House is a business in the מסעדנות industry.
-
-## Target Audience
-- חובבי מאכלי ים
-- זוגות מקומיים
-
-## Industry
-מסעדנות
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/sitemap.xml
-- **Robots.txt**: https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/robots.txt
+- **Sitemap**: https://seafood-house.zappy5.app/sitemap.xml
+- **Robots.txt**: https://seafood-house.zappy5.app/robots.txt

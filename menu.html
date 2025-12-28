@@ -341,47 +341,47 @@
     
     // FIX MOBILE BUTTON CONTRAST
     // Detect navbar background color and apply contrasting color to mobile buttons
-    const navbar = document.querySelector('.navbar, nav, header');
+    var navbar = document.querySelector('.navbar, nav, header');
     if (!navbar) {
       console.log('[Navbar] Navbar element not found');
       return;
     }
     
-    const computedStyle = window.getComputedStyle(navbar);
-    let bgColor = computedStyle.backgroundColor;
+    var computedStyle = window.getComputedStyle(navbar);
+    var bgColor = computedStyle.backgroundColor;
     
     console.log('[Navbar] Initial navbar background:', bgColor);
     
     // Check if background is transparent or rgba with 0 alpha
-    const isTransparent = bgColor === 'transparent' || 
+    var isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
                          (bgColor.startsWith('rgba') && bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
-      const bgImage = computedStyle.backgroundImage;
+      var bgImage = computedStyle.backgroundImage;
       if (bgImage && bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
         // Transparent navbar - check body background
-        const bodyBg = window.getComputedStyle(document.body).backgroundColor;
+        var bodyBg = window.getComputedStyle(document.body).backgroundColor;
         console.log('[Navbar] Navbar transparent, using body background:', bodyBg);
         bgColor = bodyBg;
       }
     }
     
     // Calculate luminance to determine if background is light or dark
-    const rgb = bgColor.match(/\d+/g);
+    var rgb = bgColor.match(/\d+/g);
     if (rgb && rgb.length >= 3) {
-      const r = parseInt(rgb[0]);
-      const g = parseInt(rgb[1]);
-      const b = parseInt(rgb[2]);
-      const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+      var r = parseInt(rgb[0]);
+      var g = parseInt(rgb[1]);
+      var b = parseInt(rgb[2]);
+      var luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
       
-      // Don't apply color overrides - let Claude's CSS handle all colors
-      const mobileToggle = document.querySelector('.mobile-toggle');
-      const phoneBtn = document.querySelector('.phone-header-btn');
+      // Don't apply color overrides - var Claude's CSS handle all colors
+      var mobileToggle = document.querySelector('.mobile-toggle');
+      var phoneBtn = document.querySelector('.phone-header-btn');
       
       console.log('[Navbar] Mobile buttons found - colors from Claude\'s CSS:', { 
         bgColor, 
@@ -391,10 +391,10 @@
       
       // FIX ICON SIZES - Ensure SVGs are properly sized and visible
       // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES
-      const criticalCSS = document.createElement('style');
+      var criticalCSS = document.createElement('style');
       criticalCSS.id = 'zappy-mobile-nav-fix';
-      const htmlLang = document.documentElement.lang || 'en';
-      const isRTL = htmlLang === 'he' || htmlLang === 'ar';
+      var htmlLang = document.documentElement.lang || 'en';
+      var isRTL = htmlLang === 'he' || htmlLang === 'ar';
       
       criticalCSS.textContent = `
         /* Hide mobile buttons on desktop, show only on mobile */
@@ -438,7 +438,7 @@
           .phone-header-btn svg {
             width: 24px !important;
             height: 24px !important;
-            /* Don't force display - let JavaScript control hamburger/close toggle */
+            /* Don't force display - var JavaScript control hamburger/close toggle */
           }
           
           /* SVG path colors from Claude's CSS - don't override */
@@ -446,7 +446,7 @@
       `;
       
       // Remove existing fix if present and inject new one
-      const existing = document.getElementById('zappy-mobile-nav-fix');
+      var existing = document.getElementById('zappy-mobile-nav-fix');
       if (existing) existing.remove();
       document.head.appendChild(criticalCSS);
       
@@ -467,8 +467,8 @@
           mobileToggle.style.setProperty('right', 'auto', 'important');
         }
         
-        const hamburgerIcon = mobileToggle.querySelector('.hamburger-icon');
-        const closeIcon = mobileToggle.querySelector('.close-icon');
+        var hamburgerIcon = mobileToggle.querySelector('.hamburger-icon');
+        var closeIcon = mobileToggle.querySelector('.close-icon');
         
         if (hamburgerIcon) {
           hamburgerIcon.style.setProperty('width', '24px', 'important');
@@ -504,7 +504,7 @@
           phoneBtn.style.setProperty('left', 'auto', 'important');
         }
         
-        const phoneIcon = phoneBtn.querySelector('svg');
+        var phoneIcon = phoneBtn.querySelector('svg');
         if (phoneIcon) {
           phoneIcon.style.width = '24px';
           phoneIcon.style.height = '24px';
@@ -524,8 +524,8 @@
     
     // MOBILE MENU TOGGLE
    
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
+    var mobileToggle = document.getElementById('mobileToggle');
+    var navMenu = document.getElementById('navMenu');
     
     if (!mobileToggle || !navMenu) {
       console.log('[Navbar] Mobile toggle or menu not found');
@@ -535,7 +535,7 @@
     console.log('[Navbar] Initializing mobile menu...');
     
     // Remove any existing event listeners by cloning the button
-    const newToggle = mobileToggle.cloneNode(true);
+    var newToggle = mobileToggle.cloneNode(true);
     mobileToggle.parentNode.replaceChild(newToggle, mobileToggle);
     
     // Toggle menu on button click - use newToggle now
@@ -543,9 +543,9 @@
       e.preventDefault();
       e.stopPropagation();
       
-      const hamburgerIcon = this.querySelector('.hamburger-icon');
-      const closeIcon = this.querySelector('.close-icon');
-      const isActive = navMenu.classList.contains('active');
+      var hamburgerIcon = this.querySelector('.hamburger-icon');
+      var closeIcon = this.querySelector('.close-icon');
+      var isActive = navMenu.classList.contains('active');
       
       if (isActive) {
         // Close menu
@@ -565,11 +565,11 @@
     });
     
     // Close menu when clicking nav links
-    const navLinks = navMenu.querySelectorAll('a');
+    var navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(function(link) {
       link.addEventListener('click', function() {
-        const hamburgerIcon = newToggle.querySelector('.hamburger-icon');
-        const closeIcon = newToggle.querySelector('.close-icon');
+        var hamburgerIcon = newToggle.querySelector('.hamburger-icon');
+        var closeIcon = newToggle.querySelector('.close-icon');
         
         navMenu.classList.remove('active');
         if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important');
@@ -580,12 +580,12 @@
     });
     
     // Phone button functionality
-    const phoneBtn = document.querySelector('.phone-header-btn');
+    var phoneBtn = document.querySelector('.phone-header-btn');
     if (phoneBtn) {
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
-        const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length > 0 
+        var phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+        var phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '[business_phone]';
         
@@ -598,10 +598,10 @@
     
     // === WHATSAPP BUTTON VISIBILITY FIX ===
     // Ensure WhatsApp floating button is hidden on desktop and visible on mobile
-    const handleWhatsAppVisibility = function() {
-      const whatsappBtn = document.querySelector('.whatsapp-float, a[href*="wa.me"]');
+    var handleWhatsAppVisibility = function() {
+      var whatsappBtn = document.querySelector('.whatsapp-float, a[href*="wa.me"]');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth >= 769;
+        var isDesktop = window.innerWidth >= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -622,7 +622,7 @@
     handleWhatsAppVisibility();
     
     // Run on resize with debouncing
-    let resizeTimer;
+    var resizeTimer;
     window.addEventListener('resize', function() {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(handleWhatsAppVisibility, 100);
