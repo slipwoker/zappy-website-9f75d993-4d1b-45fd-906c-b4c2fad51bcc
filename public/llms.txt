@@ -1,58 +1,47 @@
-# Seafood House — Generative Engine Optimization Map
-
-> A מסעדנות business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
 ### Home
-https://seafood-house-9f75d993.zappy5.app
+https://example.com
 Seafood House - מסעדת פירות ים יוקרתית המציעה חוויית אוכל מעודנת עם המנות הטריות והטעימות ביותר. הזמן שולחן עכשיו.
 
 ### Menu
-https://seafood-house-9f75d993.zappy5.app/menu
+https://example.com/menu
 גלה את תפריט פירות הים המגוון שלנו - מנות פתיחה, מנות עיקריות, פסטות וקינוחים. טריות מובטחת בכל מנה.
 
 ### About
-https://seafood-house-9f75d993.zappy5.app/about
+https://example.com/about
 גלה את הסיפור מאחורי Seafood House, פגוש את הצוות והשף הראשי, ולמד על הערכים והמחויבות שלנו למצוינות קולינרית.
 
 ### Contact
-https://seafood-house-9f75d993.zappy5.app/contact
+https://example.com/contact
 צור קשר עם Seafood House או הזמן שולחן עכשיו. נשמח לארח אותך לחוויית אוכל בלתי נשכחת.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://seafood-house-9f75d993.zappy5.app/privacy
+https://example.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://seafood-house-9f75d993.zappy5.app/terms
+https://example.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://seafood-house-9f75d993.zappy5.app/accessibility
+https://example.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Seafood House
-Seafood House is a business in the מסעדנות industry.
-
-## Target Audience
-- חובבי מאכלי ים
-- זוגות מקומיים
-
-## Industry
-מסעדנות
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://seafood-house-9f75d993.zappy5.app/sitemap.xml
-- **Robots.txt**: https://seafood-house-9f75d993.zappy5.app/robots.txt
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
