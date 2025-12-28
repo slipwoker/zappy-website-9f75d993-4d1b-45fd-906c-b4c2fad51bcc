@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zappy-site-9f75d993-4d1b-45fd-906c.onrender.com/sitemap.xml
+Sitemap: https://seafood-house.zappy5.app/sitemap.xml
