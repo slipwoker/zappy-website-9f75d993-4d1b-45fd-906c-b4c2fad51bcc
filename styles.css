@@ -232,7 +232,7 @@ img, picture, figure {
   }
 
   /* 6. IMAGE RESPONSIVENESS */
-  img {
+  img:not(.hero-image) {
     max-width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
